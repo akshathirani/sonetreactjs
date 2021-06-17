@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script>
+        function funs(){
+        var s=document.getElementById("weather").value
+        console.log(s);
+            var request = new XMLHttpRequest();
+        request.open("GET","https://api.openweathermap.org/data/2.5/weather?q="+s+"&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+        request.onload =  function(){
+            if( request.status>=200 && request.status<400){
+                var data = JSON.parse(request.responseText);
+                console.log(data);
+                document.getElementById('temp').innerHTML = data.main.temp;
+                document.getElementById('clouds').innerHTML = data.weather[0].description;
+                var icon = data.weather[0].icon+".png";
+                document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+            }
+            else {
+                console.log("some error");
+            }
+        };
+        request.onerror = function(){
+            console.log("connection error");
+        };
+       request.send();
+    }
+       
+       
+    </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    
+</head>
+<body>
+<div class="container" style="background-color: blueviolet; margin-top: 10%;border-radius: 5px;">
+    <div style="margin: 10%;">
+<select id="weather" onchange="funs()"  >
+    <option>---</option>
+    <option value="Hyderabad">
+        Hyderabad
+    </option>
+    <option value="Mumbai">
+        Mumbai
+    </option>
+    <option value="Delhi">
+        Delhi
+    </option>
+
+    <option value="Kolkata">
+        Kolkata
+    </option>
+
+</select>
+<h2 style="color: cornsilk;">
+    The Temperature is
+</h2>
+<h2 id="temp" style="color: cornsilk;">
+    none
+
+
+</h2>
+<h3 style="color: cornsilk;">
+    The weather is 
+</h3>
+<h3 id="clouds" style="color: cornsilk;">
+    none
+    
+</h3>
+<img src="img.png" id="myimg" />
+</div>
+
+
+</div>
+    
+</body>
+</html>

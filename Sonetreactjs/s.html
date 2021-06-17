@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script>
+        function funst(){
+            const element = document.querySelector('form');
+            element.addEventListener('submit', event => {
+            event.preventDefault();
+  // actual logic, e.g. validate the form
+ 
+});
+
+            const myform={
+                "names":"",
+                "email":"",
+                    "phone":"" 
+                }
+                myform.names=document.getElementById("name").value;
+                myform.email=document.getElementById("email").value;
+                myform.phone=document.getElementById("phone").value;
+            JSON.stringify(myform);
+            document.querySelector('form').reset();           
+            console.log(myform);
+
+
+        }
+    </script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    
+</head>
+<body >
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">AnimeForYou</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="nav-item"><a class="nav-link active" data-toggle="pill"  role="tab" href="#as">Home</a></li>
+            <li><a  class="nav-link " data-toggle="pill"  role="tab" href="#as1" >About</a></li>
+            <li><a  class="nav-link " data-toggle="pill"  role="tab" href="#as2" >Anime</a></li>
+            <li><a  class="nav-link " data-toggle="pill"  role="tab" href="#as3" >Manga</a></li>
+            
+            <li><a class="nav-link" href="#" data-toggle="modal" data-target="#staticBackdrop3">Contactus</a></li>
+            
+            <div class="modal fade" id="staticBackdrop3" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content" style="background-color: rgb(248, 246, 246);color: white;">
+
+                        <div class="modal-header">
+                            <button type="button" class="close bg-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Us through Form</h2>
+                            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                                a matter of hours to help you.</p>
+                        
+
+                            
+                        </div>
+                        <div class="modal-body">
+                            <div class="container contact-form">
+                                
+                                <form    >
+                                    
+                                   <div class="row" style="margin-right: 5%;">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="txtName" id="name" class="form-control" placeholder="Your Name *" value="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" name="txtEmail" id="email" class="form-control" placeholder="Your Email *" value="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="txtPhone" id="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea name="txtMsg"  class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" onclick="funst()"  class="btnContact"  >Send Message</button>
+                                            </div>
+                                            
+                                        </div>
+                                        <div >
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </form>
+                    </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </ul>
+         
+          <form class="navbar-form navbar-right">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="search">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Anime For You</h1>
+            <hr align="left" width="50%">
+            <hr align="left" width="40%">
+            <hr align="left" width="30%">
+        </div>
+
+    </div>
+    <div id="toggle" onClick="funs(this.id)">
+       
+        <div id="circle"></div>
+      
+      </div>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="as" role="tabpanel">
+        <div class="container start" style="color: #c0c0e7;">
+         <h1 id="heading" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Anime For You</h1>   
+        <h2 style="font-family:Arial, Helvetica, sans-serif">
+            Join us in our journey enjoying Anime 
+        </h2>
+        <h3>
+            Create of a list of anime you've seen, watch them online, discover new anime and more on Anime For You. Search thousands of anime by your favorite tags, genres, studios, years, ratings, and more!..Anime For You  is a free site here you can explore latest anime, movies and much more
+            you can also read about latest and old Manga ...
+        </h3>
+        <a href="#next" style="margin-top: 5%;"><span class="glyphicon glyphicon-chevron-down icon-size" ></span></a>
+        <div id="next" style="background-color: rgb(224, 138, 7);color: white;margin-top: 10%;">
+            <div style="padding: 5% 5% 5% 5% ;">
+                <br>
+            <h3 style="font-family:sans-serif;"><strong>Anime For You</strong>.to is the best animes online website, where you can watch anime online completely free. No download, no surveys and only instant premium streaming of animes. The latest animes online & series animes and highest quality for you. Enjoy your favorite animes with <strong>Anime For You</strong>, Anime For You updated responsive design - mobile friendly interface, watch animes online on mobile devices!
+                Offering a premium viewing experience AnimeSeason needs attention. There is nearly no advertisement while anime series are nicely arranged within categories. Famous series they have are One Piece, Hunter X Hunter, and Naruto. You can download whatever you want from AnimeHeaven as long as they can be found. You can watch anime online and download (only on XServer) them from Google Drive to your local files.
+           <br>
+           <br>
+           <h3 style="font-family:fantasy;text-align: right;">~Anime For You</h3>
+            </h3>
+            </div>
+        </div>
+        
+        </div>
+        <div class="container anime1 " style="color: #c0c0e7;">
+<h1 >
+    Anime Section 
+</h1>
+<div class="row" style="margin-top: 5%;">
+    <div class="col-md-6 col-xs-12" style="margin-top: 3%;" >
+        <img class="rounded-circle" align="left" id="collage" class="thumbnaill" src="img/anime-collage.png">
+
+
+    </div>
+    <div align="left" class="col-md-6 col-xs-12 ">
+        <h3 style="font-family:'Courier New', Courier, monospace;font-weight: 700;">
+Anime is growing in popularity nowadays.we provide a bunch of genres in anime for the anime weebs.
+some of the genre include-
+
+
+        </h3>
+        <a class="btn btn-danger" href=#>
+  Shounen
+        </a>
+        <a class="btn btn-danger" href=#>
+            Shojo
+        </a>
+        <a class="btn btn-danger" href=#>
+                   Romance
+        </a>
+        <a class="btn btn-danger" href=#>
+            Sports
+        </a>
+        <a class="btn btn-danger" href=#>
+            Slice if life
+        </a>
+        <a class="btn btn-danger" href=#>
+            Mecha
+        </a>
+        
+
+        <a class="btn btn-danger" href=#>
+           Supernatural
+        </a>
+        <a class="btn btn-danger" href=#>
+            Comedy
+        </a>
+        <a class="btn btn-danger" href=#>
+           Magic
+        </a>
+        <a class="btn btn-danger" href=#>
+            School
+        </a>
+        <a class="btn btn-danger" href=#>
+            Horror
+        </a>
+        <a class="btn btn-danger" href=#>
+            Action
+        </a>
+        <a class="btn btn-danger" href=#>
+            Adventure
+        </a>
+        <a class="btn btn-danger" href=#>
+            Drama
+        </a>
+        <a class="btn btn-danger" href=#>
+            Crime-Fiction
+        </a>
+        <a class="btn btn-danger" href=#>
+            Thriller
+        </a>
+        <a class="btn btn-danger" href=#>
+            Demons
+        </a>
+        <a class="btn btn-danger" href=#>
+            Game
+        </a>
+        <a class="btn btn-danger" href=#>
+            Harem
+        </a>
+        <a class="btn btn-danger" href=#>
+            Parody
+        </a>
+        
+
+
+    </div>
+
+</div>
+        </div>
+        <div class="container anime" style="margin-top: 5%;color: #c0c0e7;margin-bottom: 5%;">
+            <h1 >
+                Manga Section 
+            </h1>
+            <div class="row" style="margin-top: 5%;">
+                
+                <div align="left" class="col-md-6 col-xs-12 ">
+                    <h3 style="font-family:'Courier New', Courier, monospace;font-weight: 700;">
+            Many people have been reading a lot of Manga lately due to its power to attract readers and relatable scenes
+            Manga also has different types of Genre.these include-
+            
+            
+                    </h3>
+                    <a class="btn btn-warning" href=#>
+              Shounen
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Adapted to Anime
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                               Romance
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Sports
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Slice if life
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        After life
+                    </a>
+                    
+            
+                    <a class="btn btn-warning" href=#>
+                       Josei
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Age gap
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                       Magic
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        School
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Aliens
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Action
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Adventure
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Drama
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Crime-Fiction
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Thriller
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Demons
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Game
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Harem
+                    </a>
+                    <a class="btn btn-warning" href=#>
+                        Parody
+                    </a>
+                    
+            
+            
+                </div>
+                <div class="col-md-6 col-xs-12" style="margin-top: 3%;" >
+                    <img class="rounded-circle" align="right" id="collage" class="thumbnaill" src="img/manga-collage.jpg">
+            
+            
+                </div>
+            
+            </div>
+                    </div>
+        </div>
+    
+    <div class="tab-pane fade" id="as3" role="tabpanel"><div class="container"   style="background-color: rgb(151, 150, 148);">
+        <div class="row rowsetting">
+            <div class="col-sm-4 " id="anime">
+                <div class="card">
+                <a href="#animes" ><img src="img/OIP.jpg" class="card-img img-fluid" height="250px" width="370" style="border-radius: 10px;"></a>
+                <div class="card-body">
+                <h3  class="card-title" style="text-align: center;">Anime</h3>
+            </div>
+        </div>
+
+            </div>
+            <div class="col-sm-4" id="manga">
+                <div class="card">
+                <a href="#mangas"><img src="img/manga.jpg"  class="card-img img-fluid" width="370px" height="250px" style="border-radius: 10px;"></a>
+                <div class="card-body">
+                <h3 class="card-title" style="text-align: center;">Manga</h3>
+            </div>
+        </div>
+            </div>
+            <div class="col-sm-4" id="manga">
+                <div class="card">
+                <a href="#games" ><img src="img/game.jpg"  class="card-img img-fluid" height="250px" style="border-radius: 10px;"></a>
+                <div class="card-body">
+                <h3 class="card-title" style="text-align: center;">Game</h3>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style=" background-color: rgb(231, 142, 8);">
+        <h1 style="text-align: center;">Anime Section</h1>
+        <div class="row rowset" id="animes">
+            <div class="col-sm-3 t">
+
+                <img src="img/Haikyuu.jpg" class="img-fluid images">
+                <h3>haikyuu</h3>
+            </div>
+            <div class="col-sm-3 t">
+
+                <img src="img/rengoku.jfif" class="img-fluid images">
+                <h3>Demon Slayer</h3>
+            </div>
+            <div class="col-sm-3 t">
+
+                <img src="img/rezero.png" class="img-fluid images">
+                <h3>Re Zero</h3>
+            </div>
+        </div>
+        <div class="row rowset" id="animes">
+            <div class="col-sm-3">
+
+                <img src="img/jujutsu.jfif" class="img-fluid images">
+                <h3>JUjutsu Kaisen</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/codegeass.jfif" class="img-fluid images">
+               <h3>Code Geass</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/kaguya.jpg" class="img-fluid images">
+                <h3>kaguya-sama</h3>
+            </div>
+        </div>
+        <hr width="50%">
+        <div class="row rowset" id="animes">
+            <div class="col-sm-3">
+
+                <img src="img/mha.jfif" class="img-fluid images">
+                <h3>My Hero Academia</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/silentvoice.jpg" class="img-fluid images">
+                <h3>A Silent Voice</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/yourname.jfif" class="img-fluid images">
+                <h3>
+                    Your Name
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="container" style=" background-color: rgb(224, 138, 7);">
+        <h1 style="text-align: center;">Manga Section</h1>
+        <div class="row rowset" id="mangas">
+            <div class="col-sm-3 t">
+
+                <img src="img/horimiya.jpg" class="img-fluid images">
+                <h3>Horimiya</h3>
+            </div>
+            <div class="col-sm-3 t">
+
+                <img src="img/breserk.jpg" class="img-fluid images">
+                <h3>Breserk</h3>
+            </div>
+            <div class="col-sm-3 t">
+
+                <img src="img/fairy tail.jpg" class="img-fluid images">
+                <h3>Fairy Tail</h3>
+            </div>
+        </div>
+        <div class="row rowset" id="animes">
+            <div class="col-sm-3">
+
+                <img src="img/noragami.jpg" class="img-fluid images">
+                <h3>Noragami</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/one.jpg" class="img-fluid images">
+               <h3>Onepiece</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/solo.jpg" class="img-fluid images">
+                <h3>Solo Leveling</h3>
+            </div>
+        </div>
+        <div class="row rowset" id="animes">
+            <div class="col-sm-3">
+
+                <img src="img/dororo.jpg" class="img-fluid images">
+                <h3>Dororo</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/naruto.jpg" class="img-fluid images">
+                <h3>Naruto</h3>
+            </div>
+            <div class="col-sm-3">
+
+                <img src="img/haikyuum.jpg" class="img-fluid images">
+                <h3>
+                    haikyuu
+                </h3>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="tab-pane fade" id="as4" role="tabpanel">...</div>
+    </div>
+    <div class="container-fluid" style="background-color: black; margin-top: 10%;color: white;">
+<div class="row">
+    <div class="col-md-3" style="padding-left: 10%;text-align: left;">
+        <h2 style="font-weight: 700;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">AnimeForYou</h2>
+        <span class="glyphicon glyphicon-map-marker"></span><h4>plot no-27 hyderabad</h4>
+        <span class="glyphicon glyphicon-earphone"></span><h4>+91 979427492</h4>
+        <span class="glyphicon glyphicon-send"></span><h4>animeforyou@gmail.com</h4>
+
+
+    </div>
+    <div class="col-md-3" style="padding-left: 10%;text-align: left;">
+        <h3 style="font-weight: 700;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">About</h3>
+        <h4>Popularity</h4>
+        <h4>Achievments</h4>
+        <h4>Works</h4>
+
+
+    </div>
+    <div class="col-md-3" style="padding-left: 10%;text-align: left;">
+        <h3 style="font-weight: 700;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Social</h3>
+        <h4>Facebook</h4>
+        <h4>Twitter</h4>
+        <h4>Instagram</h4>
+    </div>
+    <div class="col-md-3" style="padding-left: 10%;text-align: left;">
+        <h3 style="font-weight: 700;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Legal</h3>
+        <h4>Terms & Conditions</h4>
+        <h4>Privacy Policy</h4>
+        <h4>Help</h4>
+    </div>
+    
+
+</div>
+<hr width="50%">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+
+  
+        
+    </div>
+
+    
+
+    
+</body>
+<script>
+    var toggled=false;
+   function funs(id){
+       if(!toggled){
+        document.getElementById('circle').style.marginLeft="35px";
+        toggled=true;
+        document.body.style.backgroundColor="white";
+        document.getElementsByClassName('anime1')[0].style.color="#0d0d11";
+        document.getElementsByClassName('anime')[0].style.color="#0d0d11";
+        document.getElementsByClassName('start')[0].style.color="#0d0d11";
+        document.getElementById('next').style.color="white";
+        
+
+       }else{
+        document.getElementById('circle').style.marginLeft="1px";
+        
+        toggled=false;
+        document.body.style.backgroundColor="#161625";
+        document.getElementsByClassName('anime1')[0].style.color="#c0c0e7";
+        document.getElementsByClassName('anime')[0].style.color="#c0c0e7";
+        document.getElementsByClassName('start')[0].style.color="#c0c0e7";
+        document.getElementById('next').style.color="white";
+
+
+       }
+
+
+   }
+
+</script>
+
+</html>
